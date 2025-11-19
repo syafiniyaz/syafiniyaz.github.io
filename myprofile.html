@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Profile | Netflix Style</title>
+  <link rel="icon" type="image/png" href="images/gambar1.png">
   <link rel="stylesheet" href="css/myprofilecss.css" />
   <link href="https://fonts.googleapis.com/css2?family=Scheherazade&display=swap" rel="stylesheet">
 </head>
@@ -106,6 +107,15 @@
     </div>
   </section>
 
+<!-- UP TO TOP BUTTON -->
+<button id="upToTop" title="Back to Top">↑</button>
+
+<!-- AUDIO PLAYER -->
+<div class="audio-player">
+    <audio id="bg-audio" src="audio/Maher Zain - Rahmatun LilAlameen.mp3" autoplay loop muted></audio>
+    <button id="audio-toggle" title="Pause/Play Audio">🔊</button>
+</div>
+  
   <!-- FOOTER -->
   <footer>
     <p>© 2025 My Hiking Adventure | Designed with ❤️ by Niyazz</p>
@@ -114,5 +124,8 @@
   <script>
     function expandCard(card) { card.classList.toggle('expanded'); }
   </script>
+
+  <script src="js/homejs.js"></script>
 </body>
 </html>
+
