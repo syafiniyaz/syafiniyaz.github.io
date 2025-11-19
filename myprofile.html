@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile | Netflix Style</title>
+  <link rel="stylesheet" href="css/myprofilecss.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Scheherazade&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <h1>My Hiking Adventure</h1>
+      <p>Explore • Discover • Connect with Nature</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a class="active" href="myprofile.html">My Profile</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+        <li><a href="experience.html">Experiences</a></li>
+        <li><a href="highlight.html">Highlights</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO / ABOUT -->
+  <section class="about-hero">
+    <div class="parallax-bg"></div>
+    <div class="parallax-bg-2"></div> <!-- gambar landscape baru -->
+    <div class="overlay"></div>
+
+    <div class="about-content">
+      <!-- Profile Avatar -->
+      <div class="profile-avatar fade-in">
+        <img src="images/niyaz.png" alt="Niyazz Avatar" />
+      </div> 
+
+      <!-- About Text -->
+      <div class="about-text">
+        <h2 class="animated-text">Hi, I'm Niyazz</h2>
+
+        <p class="fade-in delay-1">Who Am I?</p>
+
+        <p class="fade-in delay-2">
+            Greetings! I’m Muhammad Syafi Niyaz bin Shikiman Mansoor, a final-year Diploma student in Information Management at UiTM Merbok, Kedah, currently enrolled in class KCDIM1105E. This website is created as part of my individual assignment for IMD 318, under the guidance of Sir Mohd Nor Azam bin Md Saleh.
+            Throughout my studies, I have developed a keen understanding of how technology and information systems can be leveraged to optimize processes and deliver tangible benefits to society. My academic journey goes beyond data management and technical skills, focusing on meaningful applications that create positive and lasting impact.
+        </p>
+
+        <p class="fade-in delay-3">
+            On this website, I will present insights into my life, covering my educational background, personal interests, hobbies, and other experiences that have shaped both my academic and personal growth.
+        </p>
+
+        <a href="experience.html" class="cta-button fade-in delay-4">Explore My Experiences</a>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="quick-stats fade-in delay-5">
+        <div class="stat">
+          <h4>20</h4>
+          <p>Years Old</p>
+        </div>
+        <div class="stat">
+          <h4>176</h4>
+          <p>Height(cm)</p>
+        </div>
+        <div class="stat">
+          <h4>60</h4>
+          <p>Weight(kg)</p>
+        </div>
+      </div>
+
+      <!-- Scrollable Cards -->
+      <div class="cards">
+        <div class="card fade-in delay-6" onclick="expandCard(this)">
+          <img src="images/gambar1.png" alt="Adventure 1">
+          <div class="card-content">
+            
+          </div>
+        </div>
+
+        <div class="card fade-in delay-7" onclick="expandCard(this)">
+          <img src="images/gambar2.png" alt="Adventure 2">
+          <div class="card-content">
+          
+        </div>
+
+        <div class="card fade-in delay-8" onclick="expandCard(this)">
+          <img src="images/gambar2.png" alt="Adventure 3">
+          <div class="card-content">
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating Fire -->
+      <div class="floating-fire">
+        <span class="fire">🔥</span>
+        <span class="fire">🔥</span>
+        <span class="fire">🔥</span>
+        <span class="fire">🔥</span>
+        <span class="fire">🔥</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 My Hiking Adventure | Designed with ❤️ by Niyazz</p>
+  </footer>
+
+  <script>
+    function expandCard(card) { card.classList.toggle('expanded'); }
+  </script>
+</body>
+</html>

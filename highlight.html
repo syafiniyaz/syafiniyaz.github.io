@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Highlight | My Hiking Adventure</title>
+  <link rel="stylesheet" href="css/homecss.css" />
+  <link rel="stylesheet" href="css/highlightcss.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <h1>My Hiking Adventure</h1>
+      <p>Explore • Discover • Conquer</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="myprofile.html">My Profile</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+        <li><a href="experience.html">Experiences</a></li>
+        <li><a class="active" href="highlight.html">Highlights</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HIGHLIGHT SECTION -->
+  <section class="highlight">
+    <img class="highlight-bg" src="images/highlight.png" alt="Highlight Background">
+    <div class="highlight-container">
+      <h2>My <span>Adventure Highlights</span></h2>
+      <p class="intro">Three epic adventures with dynamic video previews.</p>
+
+      <div class="highlight-grid">
+        <!-- CARD TEMPLATE -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <!-- FRONT SIDE: VIDEO GRID -->
+            <div class="flip-card-front video-grid">
+              <div><video src="videos/hiking1.mp4" autoplay muted loop></video></div>
+              <div><video src="videos/hiking2.mp4" autoplay muted loop></video></div>
+              <div><video src="videos/hiking3.mp4" autoplay muted loop></video></div>
+              <div><video src="videos/hiking4.mp4" autoplay muted loop></video></div>
+              <div><video src="videos/hiking5.mp4" autoplay muted loop></video></div>
+              <div><video src="videos/hiking6.mp4" autoplay muted loop></video></div>
+              <div><video src="videos/hiking7.mp4" autoplay muted loop></video></div>
+              <div><video src="videos/hiking8.mp4" autoplay muted loop></video></div>
+              <div><video src="videos/hiking9.mp4" autoplay muted loop></video></div>
+            </div>
+
+            <!-- BACK SIDE: DESCRIPTION -->
+            <div class="flip-card-back">
+              <img src="images/hikingdp.png" alt="Hiking Adventure">
+              <div class="video-text">
+                <h3>Hiking Adventure</h3>
+                <p>Breathtaking trails and unforgettable mountain climbs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2 – KAYAK -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front video-grid">
+              <div><video src="videos/kayak1.mp4" autoplay muted loop></video></div>
+              <div><video src="videos/kayak2.mp4" autoplay muted loop></video></div>
+              <div><video src="videos/kayak3.mp4" autoplay muted loop></video></div>
+              <div><video src="videos/kayak4.mp4" autoplay muted loop></video></div>
+              <div><video src="videos/kayak5.mp4" autoplay muted loop></video></div>
+              <div><video src="videos/kayak6.mp4" autoplay muted loop></video></div>
+              <div><video src="videos/kayak7.mp4" autoplay muted loop></video></div>
+              <div><video src="videos/kayak8.mp4" autoplay muted loop></video></div>
+              <div><video src="videos/kayak9.mp4" autoplay muted loop></video></div>
+            </div>
+            <div class="flip-card-back">
+              <img src="images/kayakdp.png" alt="Kayaking Adventure">
+              <div class="video-text">
+                <h3>Kayaking Adventure</h3>
+                <p>Paddling through peaceful rivers and powerful waves.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3 – CAMPING -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front video-grid">
+              <div><video src="videos/camp1.mp4" autoplay muted loop></video></div>
+              <div><video src="videos/camp2.mp4" autoplay muted loop></video></div>
+              <div><video src="videos/camp3.mp4" autoplay muted loop></video></div>
+              <div><video src="videos/camp4.mp4" autoplay muted loop></video></div>
+              <div><video src="videos/camp5.mp4" autoplay muted loop></video></div>
+              <div><video src="videos/camp6.mp4" autoplay muted loop></video></div>
+              <div><video src="videos/camp7.mp4" autoplay muted loop></video></div>
+              <div><video src="videos/camp8.mp4" autoplay muted loop></video></div>
+              <div><video src="videos/camp9.mp4" autoplay muted loop></video></div>
+            </div>
+            <div class="flip-card-back">
+              <img src="images/campingdp.png" alt="Camping Adventure">
+              <div class="video-text">
+                <h3>Camping Adventure</h3>
+                <p>Cozy nights, bright campfires, and peaceful outdoor vibes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTES SECTION -->
+  <section class="notes">
+    <img class="notes-bg" src="images/gunung5.png" alt="Notes Background">
+    <div class="notes-container">
+      <h2>Leave Your <span>Notes & Ratings</span></h2>
+      <p class="intro">Share your thoughts! Everyone can see your notes.</p>
+
+      <form id="noteForm">
+        <input type="text" id="username" placeholder="Your Name" required />
+        <textarea id="noteText" placeholder="Write your note..." required></textarea>
+        <div class="rating" id="ratingStars">
+          <span>Rating:</span>
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+        <input type="hidden" id="noteRating" value="5" />
+        <button type="submit">Post Note</button>
+      </form>
+
+      <div id="notesFloatingArea"></div>
+    </div>
+  </section>
+
+  <div class="floating-container" id="floatingContainer"></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 My Hiking Adventure | Designed with ❤️ by Niyazzz</p>
+  </footer>
+
+  <script src="js/highlightjs.js"></script>
+</body>
+</html>
