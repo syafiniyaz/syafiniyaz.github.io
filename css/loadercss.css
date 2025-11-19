@@ -1,0 +1,142 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #000;
+    overflow: hidden;
+}
+
+/* PARTICLES */
+#particles {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+}
+
+/* WELCOME ANIMATION */
+.welcome-intro {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* WELCOME LETTERS */
+.letters span {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #e50914;
+    opacity: 0;
+    transform: scale(1.5);
+    display: inline-block;
+    margin: 0 5px;
+    animation: glowLetter 0.8s forwards;
+}
+
+.letters span:nth-child(1) { animation-delay: 0.2s; }
+.letters span:nth-child(2) { animation-delay: 0.4s; }
+.letters span:nth-child(3) { animation-delay: 0.6s; }
+.letters span:nth-child(4) { animation-delay: 0.8s; }
+.letters span:nth-child(5) { animation-delay: 1s; }
+.letters span:nth-child(6) { animation-delay: 1.2s; }
+.letters span:nth-child(7) { animation-delay: 1.4s; }
+
+@keyframes glowLetter {
+    0% { opacity: 0; transform: scale(1.5); filter: blur(15px); }
+    50% { opacity: 1; transform: scale(1); filter: blur(0); }
+    100% { opacity: 1; transform: scale(1); filter: blur(0); }
+}
+
+/* PAGE TRANSITION */
+.page-transition {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    z-index: 9998;
+    transform: translateY(100%);
+    transition: transform 0.6s cubic-bezier(.1, .9, .3, 1);
+}
+
+/* INTRO CONTENT */
+.intro {
+    height: 100vh;
+    z-index: 10;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    opacity: 0; /* muncul selepas loader */
+}
+
+.intro h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 5px;
+    color: #fff;
+}
+
+.intro .bismillah {
+    font-size: 2rem;
+    font-family: 'Scheherazade', serif;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.intro p:not(.bismillah) {
+    opacity: 0.8;
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+.enter-btn {
+    margin-top: 15px;
+    padding: 14px 40px;
+    background: #e50914;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+.enter-btn:hover {
+    background: #b40810;
+    transform: scale(1.05);
+}
+/* ANIMATED TEXT HIGHLIGHT */
+.animated-text {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 5px;
+    color: white;
+    position: relative;
+    background: linear-gradient(90deg, white 0%, red 50%, white 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: slideGradient 4s linear infinite;
+}
+
+@keyframes slideGradient {
+    0% {
+        background-position: 200% 0;
+    }
+    50% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}

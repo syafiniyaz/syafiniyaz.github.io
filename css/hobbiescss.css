@@ -1,0 +1,257 @@
+/* ===== BASIC RESET ===== */
+* { 
+    margin:0; 
+    padding:0; 
+    box-sizing:border-box; 
+    scroll-behavior:smooth; 
+}
+body { 
+    font-family:'Poppins', sans-serif; 
+    background-color:#0f0f0f; 
+    color:#ddd; 
+}
+
+/* ===== HERO ===== */
+.hero {
+    position: relative;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(1.4) contrast(1.2) saturate(1.1); /* lebih cerah & hidup */
+    transition: transform 0.5s ease, filter 0.5s ease; /* untuk efek hover nanti */
+}
+
+.hero-bg .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35); /* overlay cukup ringan untuk teks menonjol */
+    transition: background 0.5s ease;
+}
+
+.hero-box {
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px 200px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.5);
+}
+
+.hero-box h1 {
+    font-size: 2.8rem;
+    color: #e50914;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #000;
+}
+
+.hero-box p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+.hero-bg img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.5) contrast(1.25) saturate(1.2);
+}
+
+
+/* ===== HOBBIES + MORE DETAILS ===== */
+.hobbies-section { 
+    position:relative; 
+    overflow:hidden; 
+    margin-top: -80px; /* <-- tarik naik, overlap hero */
+    border-radius: 20px 20px 0 0; /* Netflix-ish smooth corner */
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.5); /* dramatik shadow */
+}
+
+/* Background 2 */
+.hobbies-bg {
+    position:absolute; 
+    top:0; left:0; 
+    width:100%; height:100%; 
+    z-index:1; 
+    overflow:hidden;
+}
+.hobbies-bg img { 
+    width:100%; height:100%; 
+    object-fit:cover; 
+}
+.hobbies-bg .overlay { 
+    position:absolute; 
+    top:0; left:0; 
+    width:100%; height:100%; 
+    background:rgba(0,0,0,0.55); 
+}
+
+/* Content above overlay */
+.hobbies-content { 
+    position:relative; 
+    z-index:2; 
+    padding:80px 20px; 
+    text-align:center; 
+    color:#fff; 
+}
+
+/* Section Titles */
+.hobbies-content h2 { 
+    font-size:2.4rem; 
+    margin-bottom:15px; 
+    letter-spacing:1px; 
+}
+.hobbies-content h2 span { 
+    color:#e50914; 
+    text-shadow:0 0 10px #e50914,0 0 25px #e50914; 
+}
+.hobbies-content .intro { 
+    max-width:700px; 
+    margin:0 auto 50px; 
+    color:#ccc; 
+    font-size:1.15rem; 
+    opacity:0.9; 
+}
+
+/* GRID */
+.hobby-grid { 
+    display:grid; 
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); 
+    gap:30px; 
+}
+
+/* CARDS */
+.hobby-card { 
+    position:relative; 
+    height:330px; 
+    border-radius:15px; 
+    overflow:hidden; 
+    background:#1a1a1a;
+    box-shadow:0 0 25px rgba(229,9,20,0.35); /* dramatik Netflix-ish */
+    cursor:pointer; 
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+.hobby-card:hover { 
+    transform:translateY(-10px); 
+    box-shadow:0 0 35px rgba(229,9,20,0.45); 
+}
+.bg-video { 
+    position:absolute; 
+    top:0; left:0; 
+    width:100%; height:100%; 
+    object-fit:cover; 
+    filter:brightness(80%); 
+    transition:0.4s ease; 
+}
+.hobby-card:hover .bg-video { 
+    filter:brightness(140%); 
+    transform:scale(1.07); 
+}
+.hobby-card .content { 
+    position:absolute; 
+    bottom:0; 
+    padding:20px; 
+    z-index:2; 
+    width:100%; 
+    background:linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0)); 
+}
+.hobby-card .icon { 
+    font-size:2.2rem; 
+    margin-bottom:6px; 
+}
+.hobby-card h3 { 
+    font-size:1.3rem; 
+    color:#e50914; 
+    margin-bottom:8px; 
+    text-shadow:0 0 10px rgba(229,9,20,0.4); 
+}
+.hobby-card p { 
+    color:#ccc; 
+    font-size:0.95rem; 
+    line-height:1.5; 
+}
+
+/* MORE DETAIL */
+.more-detail { 
+    margin-top:60px; 
+}
+.more-detail h2 { 
+    font-size:2rem; 
+    color:#e50914; 
+    margin-bottom:20px; 
+}
+.more-detail p { 
+    margin-bottom:25px; 
+    line-height:1.7; 
+}
+.detail-table { 
+    width:100%; 
+    border-collapse:collapse; 
+    margin-top:10px; 
+    table-layout: auto; /* buat column ikut content */
+    text-align: left; /* default alignment */
+}
+
+.detail-table th, .detail-table td { 
+    padding:12px 15px; /* lebih ruang supaya tak rapat */
+    border-bottom:1px solid #333; 
+    vertical-align: middle; /* align text tengah-vertikal */
+}
+
+.detail-table th { 
+    background:#e50914; 
+    color:#fff; 
+    font-weight:600; 
+    letter-spacing:0.5px;
+}
+
+.detail-table td { 
+    color:#ccc; 
+}
+
+.detail-table tr:nth-child(even) { 
+    background:#181818; 
+}
+
+/* Optional: hover effect untuk lebih dramatik */
+.detail-table tr:hover { 
+    background: rgba(229,9,20,0.2); 
+}
+
+/* FOOTER */
+footer { 
+    text-align:center; 
+    padding:20px; 
+    margin-top:40px; 
+    background:#111; 
+    border-top:2px solid #e50914; 
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .hobby-card{height:280px;}
+    .hobby-card .icon{font-size:1.8rem;}
+    .hobby-card h3{font-size:1.15rem;}
+    .more-detail{padding:20px;}
+    .hobbies-content{padding:40px 15px;}
+    .hero{height:300px;}
+    .hero-box{padding:20px 25px;}
+}
