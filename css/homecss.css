@@ -595,3 +595,388 @@ footer p {
   display: none;
 }
 
+/* HAMBURGER MENU STYLES */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #e50914;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+/* MENU OVERLAY */
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 998;
+}
+
+.menu-overlay.active {
+  display: block;
+}
+
+/* MOBILE RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  
+  /* BODY & GENERAL */
+  body {
+    padding-top: 80px;
+  }
+  
+  /* HEADER MOBILE DENGAN HAMBURGER */
+  header {
+    padding: 10px 15px;
+    flex-direction: row;
+    align-items: center;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(17,17,17,0.95);
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+  
+  /* Navigation hide/show untuk mobile */
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #111;
+    transition: 0.4s ease-in-out;
+    z-index: 1000;
+    padding-top: 100px;
+    box-shadow: -5px 0 25px rgba(229, 9, 20, 0.3);
+    border-left: 2px solid #e50914;
+  }
+  
+  nav.active {
+    right: 0;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #333;
+  }
+  
+  nav ul li:last-child {
+    border-bottom: none;
+  }
+  
+  nav ul li a {
+    display: block;
+    padding: 18px 25px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+  }
+  
+  nav ul li a:hover,
+  nav ul li a.active {
+    background: rgba(229, 9, 20, 0.1);
+    border-left: 3px solid #e50914;
+    padding-left: 30px;
+  }
+  
+  header .logo {
+    text-align: left;
+    z-index: 1001;
+  }
+  
+  header .logo h1 {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+  }
+  
+  header .logo p {
+    font-size: 0.75rem;
+  }
+  
+  /* HAMBURGER ANIMATION */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+    background: #fff;
+  }
+  
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+    background: #fff;
+  }
+  
+  /* HERO SECTION MOBILE */
+  .hero {
+    height: 60vh;
+    min-height: 350px;
+  }
+  
+  .hero-text {
+    width: 90%;
+    padding: 15px;
+  }
+  
+  .hero-text h2 {
+    font-size: 1.6rem;
+    margin-top: 20px;
+    line-height: 1.3;
+  }
+  
+  .hero-text h2 span {
+    display: inline-block;
+    transform: none !important;
+    animation: none;
+  }
+  
+  .hero-text p {
+    font-size: 0.9rem;
+    padding-top: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .cta-button {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+  
+  /* FEATURED SECTION MOBILE */
+  .featured {
+    padding: 40px 15px;
+  }
+  
+  .featured h2 {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+  }
+  
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .card {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .card img {
+    height: 200px;
+  }
+  
+  .card h3 {
+    font-size: 1.1rem;
+    margin: 10px;
+  }
+  
+  .card p {
+    font-size: 0.9rem;
+    margin: 0 10px 15px;
+  }
+  
+  /* SOCIAL MEDIA SECTION MOBILE - FIXED BACKGROUND & ICONS AT TOP */
+  .social-media {
+    position: relative;
+    padding: 100px 20px !important;
+    height: 50vh;
+    min-height: 400px;
+    overflow: hidden;
+  }
+  
+  .social-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain !important; /* TUKAR KE CONTAIN UNTUK FULL IMAGE */
+    object-position: center center;
+    filter: brightness(0.8);
+    z-index: 0;
+  }
+  
+  /* Social icons container */
+  .social-icons {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Social icons position - AT THE TOP */
+  .social-icons a {
+    position: absolute !important;
+    z-index: 2;
+  }
+  
+  .social-icons a:nth-child(1) { 
+    top: 30px !important; 
+    left: 20px !important; 
+  }
+  
+  .social-icons a:nth-child(2) { 
+    top: 30px !important; 
+    right: 20px !important; 
+    left: auto !important;
+  }
+  
+  /* Adjust icon size untuk mobile */
+  .social-icons a img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  
+  .social-icons a::before {
+    width: 80px !important;
+    height: 80px !important;
+    top: -10px !important;
+    left: -10px !important;
+  }
+  
+  /* Leaves animation adjustment untuk mobile */
+  .social-media .leaves {
+    z-index: 1;
+  }
+  
+  .social-media .leaf {
+    font-size: 12px;
+  }
+  
+  .social-media .leaf:nth-child(1) {
+    font-size: 25px;
+  }
+  
+  /* FOOTER MOBILE */
+  footer {
+    padding: 15px;
+    font-size: 0.8rem;
+  }
+  
+  /* UP TO TOP BUTTON MOBILE */
+  #upToTop {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 14px;
+    font-size: 1rem;
+  }
+  
+  /* AUDIO PLAYER MOBILE */
+  .audio-player {
+    bottom: 20px;
+    left: 20px;
+    padding: 8px 12px;
+  }
+  
+  .audio-player button {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+}
+
+/* EXTRA SMALL DEVICES */
+@media (max-width: 480px) {
+  body {
+    padding-top: 70px;
+  }
+  
+  header {
+    height: 70px;
+    padding: 8px 15px;
+  }
+  
+  .hamburger {
+    top: 20px;
+    right: 15px;
+  }
+  
+  nav {
+    width: 250px;
+    padding-top: 80px;
+  }
+  
+  nav ul li a {
+    padding: 15px 20px;
+    font-size: 1rem;
+  }
+  
+  .hero {
+    height: 50vh;
+    min-height: 300px;
+  }
+  
+  .hero-text h2 {
+    font-size: 1.4rem;
+    margin-top: 10px;
+  }
+  
+  .hero-text p {
+    padding-top: 60px;
+    font-size: 0.85rem;
+  }
+  
+  .social-media {
+    padding: 80px 15px !important;
+    height: 45vh;
+    min-height: 350px;
+  }
+  
+  .social-icons a img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  
+  .social-icons a::before {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  
+  .social-icons a:nth-child(1) { 
+    top: 25px !important; 
+    left: 15px !important; 
+  }
+  
+  .social-icons a:nth-child(2) { 
+    top: 25px !important; 
+    right: 15px !important; 
+  }
+  
+  .card img {
+    height: 180px;
+  }
+}
+
+/* Prevent body scroll when menu is open */
+body.menu-open {
+  overflow: hidden;
+}
