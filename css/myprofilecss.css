@@ -249,4 +249,65 @@ footer { padding:20px; margin-top:60px; text-align:center; color:#ccc; backgroun
     0% { background-position: 200% 0; }
     50% { background-position: 0 0; }
     100% { background-position: 200% 0; }
+
+}
+
+/* ===== UP TO TOP BUTTON ===== */
+#upToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(229, 9, 20, 0.6);
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+
+#upToTop:hover {
+  background-color: #b00610;
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(229, 9, 20, 0.9);
+}
+
+/* ===== AUDIO PLAYER ===== */
+.audio-player {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(17,17,17,0.9);
+  padding: 8px 12px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(229, 9, 20, 0.6);
+  z-index: 9999;
+}
+
+.audio-player button {
+  background-color: #e50914;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(229, 9, 20, 0.6);
+  transition: all 0.3s ease;
+}
+
+.audio-player button:hover {
+  background-color: #b00610;
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.9);
+}
+
+/* Hide default audio controls */
+.audio-player audio {
+  display: none;
 }
