@@ -388,3 +388,77 @@ footer {
         padding: 20px 15px;
     }
 }
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+    /* HERO */
+    .hero {
+        height: 300px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+    }
+
+    .hero-box {
+        padding: 0;
+        border-radius: 0;
+        background: none;
+        box-shadow: none;
+    }
+
+    .hero-box h1 {
+        font-size: 2rem;
+        color: #e50914;
+    }
+
+    .hero-box p {
+        font-size: 1rem;
+        color: #fff;
+    }
+
+    /* HOBBIES CONTENT */
+    .hobbies-content {
+        padding: 40px 20px;
+    }
+
+    /* TABLE FIX */
+@media (max-width: 768px) {
+
+    /* MORE DETAIL SECTION */
+    .more-detail {
+        padding: 0 20px 40px 20px; /* match header spacing */
+        margin-top: 40px;
+    }
+
+    /* TABLE FIX */
+    .detail-table {
+        display: block;
+        width: 100%;                /* full width of container, not viewport */
+        max-width: 100%;            /* prevent overflow */
+        margin: 0;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        box-sizing: border-box;     /* include padding in width */
+    }
+
+    .detail-table th,
+    .detail-table td {
+        padding: 10px;
+        min-width: 120px;           /* reduce cell width for mobile */
+        box-sizing: border-box;
+    }
+}
+
+}
+
