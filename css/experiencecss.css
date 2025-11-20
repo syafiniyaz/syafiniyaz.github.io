@@ -218,3 +218,62 @@ h2 {
 .audio-player audio {
   display: none;
 }
+
+@media (max-width: 768px) {
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 400px; /* pastikan hero cukup tinggi */
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero-box {
+        padding: 20px 15px;
+        max-width: 90%;
+    }
+
+    .hero-box h1 {
+        font-size: 2rem;
+    }
+
+    .hero-box p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        padding-left: 8px;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .experience-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .experience-card p {
+        font-size: 0.9rem;
+    }
+
+    .education-section {
+        gap: 20px;
+    }
+
+    #upToTop, .audio-player {
+        bottom: 15px;
+        padding: 10px;
+    }
+
+    .audio-player button {
+        padding: 6px 10px;
+        font-size: 1rem;
+    }
+}
