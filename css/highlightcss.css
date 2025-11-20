@@ -359,6 +359,11 @@ body {
   .notes-container {
     min-height: 500px;
   }
+
+  /* ===== SPACE BETWEEN FLIP CARDS ON MOBILE ===== */
+  .highlight-grid {
+    gap: 15px; /* space antara flip card */
+  }
 }
 
 @media (max-width: 480px) {
