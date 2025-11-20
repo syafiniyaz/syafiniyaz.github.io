@@ -313,39 +313,52 @@ footer { padding:20px; margin-top:60px; text-align:center; color:#ccc; backgroun
 }
 
 
-/* ===== MOBILE LAYOUT FOR MY PROFILE ===== */
+/* MOBILE RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  
+  /* BODY & GENERAL */
+  body {
+    padding-top: 80px;
+  }
+
 @media(max-width: 768px) {
 
   .about-content {
     grid-template-columns: 1fr; 
     text-align: center;
-    gap: 30px;
+    gap: 15px; /* kurang gap supaya lebih rapat */
+    padding: 20px 0; /* tambah padding top/bottom kecil */
   }
 
   .profile-avatar img {
     width: 220px;
     height: 220px;
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 20px; /* kurangkan margin-top */
   }
 
   .about-text h2 {
-    font-size: 2.3rem;
+    font-size: 2rem;
     white-space: normal;
+    margin-bottom: 15px; /* pastikan jarak dengan paragraph tak terlalu jauh */
   }
 
   .about-text p {
     text-align: justify;
+    margin-bottom: 20px; /* ruang bawah masuk akal */
   }
 
   .quick-stats {
     flex-direction: column;
-    gap: 20px;
+    gap: 15px; /* kurang gap */
+    margin: 20px 0; /* jarak top/bottom section */
   }
 
   .cards {
     flex-direction: column;
     align-items: center;
+    gap: 15px; /* tambahkan gap tapi sederhana */
+    margin-bottom: 30px;
   }
 
   .card {
@@ -353,5 +366,3 @@ footer { padding:20px; margin-top:60px; text-align:center; color:#ccc; backgroun
     max-width: 330px;
   }
 }
-
-
