@@ -13,7 +13,6 @@ body {
   color: #eee;
 }
 
-
 /* ===== HIGHLIGHT SECTION ===== */
 .highlight {
   color: #eee;
@@ -334,11 +333,42 @@ body {
   }
 }
 
-
-/* ===== MOBILE VIEW SPACING FOR FLIP CARDS ===== */
-@media (max-width: 768px) {
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
   .highlight-grid {
-    gap: 15px; /* space antara flip card kat mobile */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
+@media (max-width: 768px) {
+  .highlight h2,
+  .notes h2 {
+    font-size: 2rem;
+  }
+
+  .flip-card-inner {
+    height: 200px;
+  }
+
+  .video-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  .notes-container {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .highlight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0;
+  }
+}
