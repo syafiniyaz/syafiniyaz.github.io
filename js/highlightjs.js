@@ -122,3 +122,77 @@ noteForm.addEventListener('submit',(e)=>{
   selectedRating=5;
   updateStarsUI();
 });
+
+// HAMBURGER MENU FUNCTIONALITY - SIMPLE VERSION
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Script loaded'); // Debug line
+    
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.querySelector('nav');
+    const menuOverlay = document.getElementById('menuOverlay');
+    const body = document.body;
+
+    // Check if elements exist
+    if (!hamburger || !nav || !menuOverlay) {
+        console.log('Missing elements:', { hamburger, nav, menuOverlay });
+        return;
+    }
+
+    console.log('All elements found'); // Debug line
+
+    // Simple toggle function
+    function toggleMenu() {
+        console.log('Toggle menu clicked'); // Debug line
+        
+        const isActive = nav.classList.contains('active');
+        
+        if (!isActive) {
+            // Open menu
+            nav.classList.add('active');
+            menuOverlay.classList.add('active');
+            hamburger.classList.add('active');
+            body.classList.add('menu-open');
+        } else {
+            // Close menu
+            nav.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            hamburger.classList.remove('active');
+            body.classList.remove('menu-open');
+        }
+    }
+
+    // Hamburger click
+    hamburger.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleMenu();
+    });
+
+    // Overlay click
+    menuOverlay.addEventListener('click', function() {
+        toggleMenu();
+    });
+
+    // Nav links click
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            toggleMenu();
+        });
+    });
+
+    // Close menu on ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && nav.classList.contains('active')) {
+            toggleMenu();
+        }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (nav.classList.contains('active') && 
+            !nav.contains(e.target) && 
+            !hamburger.contains(e.target)) {
+            toggleMenu();
+        }
+    })
