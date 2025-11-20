@@ -139,4 +139,60 @@ body {
     100% {
         background-position: 200% 0;
     }
+
+}
+
+
+/* ===== MOBILE LAYOUT ===== */
+@media (max-width: 768px) {
+
+  /* WELCOME LETTERS */
+  .letters span {
+      font-size: 3rem; /* kecilkan saiz huruf */
+      margin: 0 3px;
+  }
+
+  /* INTRO CONTENT */
+  .intro {
+      gap: 15px;
+      padding: 0 20px;
+  }
+
+  .intro h1 {
+      font-size: 2rem; /* kecilkan heading */
+      letter-spacing: 3px;
+  }
+
+  .intro .bismillah {
+      font-size: 1.5rem;
+  }
+
+  .intro p:not(.bismillah) {
+      font-size: 1rem;
+  }
+
+  .enter-btn {
+      padding: 12px 30px;
+      font-size: 0.9rem;
+  }
+
+  /* ANIMATED TEXT */
+  .animated-text {
+      font-size: 2rem; /* kecilkan animated text */
+      letter-spacing: 2px;
+  }
+
+  /* PAGE TRANSITION (jaga smooth) */
+  .page-transition {
+      transition: transform 0.6s cubic-bezier(.1, .9, .3, 1);
+  }
+
+  /* PARTICLES (pastikan tak overflow) */
+  #particles {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+  }
 }
