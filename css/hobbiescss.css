@@ -315,3 +315,76 @@ footer {
 .audio-player audio {
   display: none;
 }
+
+
+
+
+@media (max-width: 768px) {
+
+    /* HERO - let it scale naturally */
+    .hero {
+        height: auto; /* auto height so image scales */
+    }
+
+    .hero-bg img {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-box {
+        padding: 20px 15px; /* small padding for mobile */
+        border-radius: 15px;
+    }
+
+    /* HOBBIES SECTION - keep desktop look but scrollable if needed */
+    .hobbies-section {
+        margin-top: -80px; /* same as desktop */
+        border-radius: 20px 20px 0 0;
+    }
+
+    .hobbies-bg img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* HOBBIES CONTENT - just add horizontal padding */
+    .hobbies-content {
+        padding: 50px 15px;
+    }
+
+    /* GRID - allow natural wrap */
+    .hobby-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+        gap: 20px;
+    }
+
+    /* HOBBY CARDS - keep height, allow scrolling naturally */
+    .hobby-card {
+        height: 330px; /* same as desktop */
+    }
+
+    /* MORE DETAILS SECTION - keep fonts and layout */
+    .more-detail {
+        padding: 40px 15px;
+        margin-top: 60px;
+    }
+
+    /* TABLE - scroll horizontally if needed */
+    .detail-table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* TABLE CELLS - same padding */
+    .detail-table th, .detail-table td {
+        padding: 12px 15px;
+    }
+
+    /* FOOTER - keep same styling, just extra padding */
+    footer {
+        padding: 20px 15px;
+    }
+}
