@@ -432,3 +432,109 @@ body {
 .audio-player audio {
   display: none;
 }
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+  
+  /* ===== HIGHLIGHT SECTION ===== */
+  .highlight {
+    padding: 30px 15px 20px;
+  }
+
+  .highlight h2 {
+    font-size: 1.8rem;
+  }
+
+  .highlight .intro {
+    font-size: 1rem;
+    max-width: 95%;
+    margin-bottom: 30px;
+  }
+
+  /* ===== HIGHLIGHT GRID ===== */
+  .highlight-grid {
+    grid-template-columns: 1fr; /* single column for mobile */
+    gap: 15px;
+    max-width: 95%;
+  }
+
+  /* ===== FLIP CARD ===== */
+  .flip-card-inner {
+    height: 200px;
+  }
+
+  /* ===== VIDEO GRID ===== */
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 videos per row */
+    grid-template-rows: auto;
+  }
+
+  /* ===== BACK SIDE IMAGE ===== */
+  .flip-card-back img {
+    object-fit: cover;
+  }
+
+  /* ===== NOTES SECTION ===== */
+  .notes {
+    padding: 30px 15px 50px;
+  }
+
+  .notes h2 {
+    font-size: 1.8rem;
+  }
+
+  .notes .intro {
+    font-size: 1rem;
+    max-width: 95%;
+    margin-bottom: 30px;
+  }
+
+  .notes-container {
+    min-height: auto;
+  }
+
+  /* ===== FORM ===== */
+  .notes form {
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  .notes input,
+  .notes textarea {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .notes button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  /* ===== VIDEO TEXT ===== */
+  .video-text {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  /* ===== FLOATING NOTES ===== */
+  .note-item {
+    min-width: 150px;
+    max-width: 250px;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
+  .note-header {
+    font-size: 0.9rem;
+  }
+
+  /* ===== STAR RATING ===== */
+  .rating {
+    padding: 4px 10px;
+  }
+
+  .rating .star {
+    font-size: 1.1rem;
+    margin: 0 1px;
+  }
+}
