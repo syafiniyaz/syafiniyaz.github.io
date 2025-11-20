@@ -5,26 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Highlight | My Hiking Adventure</title>
   <link rel="icon" type="image/png" href="images/gambar1.png">
+  <link rel="stylesheet" href="css/header.css" />
   <link rel="stylesheet" href="css/homecss.css" />
   <link rel="stylesheet" href="css/highlightcss.css" />
 </head>
 <body>
-  <!-- HEADER -->
-  <header>
-    <div class="logo">
-      <h1>My Hiking Adventure</h1>
-      <p>Explore • Discover • Conquer</p>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="https://syafiniyaz.github.io/">Home</a></li>
-        <li><a href="myprofile.html">My Profile</a></li>
-        <li><a href="hobbies.html">Hobbies</a></li>
-        <li><a href="experience.html">Experiences</a></li>
-        <li><a class="active" href="highlight.html">Highlights</a></li>
-      </ul>
-    </nav>
-  </header>
+
+
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <h1>My Hiking Adventure</h1>
+    <p>Explore • Discover • Conquer</p>
+  </div>
+
+  <!-- HAMBURGER MENU BUTTON -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav>
+    <ul id="navMenu">
+      <li><a href="https://syafiniyaz.github.io/">Home</a></li>
+      <li><a href="myprofile.html">My Profile</a></li>
+      <li><a href="hobbies.html">Hobbies</a></li>
+      <li><a href="experience.html">Experiences</a></li>
+      <li><a class="active" href="highlight.html">Highlights</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- MENU OVERLAY -->
+<div class="menu-overlay" id="menuOverlay"></div>
+
+
 
   <!-- HIGHLIGHT SECTION -->
   <section class="highlight">
@@ -141,23 +157,11 @@
 
   <div class="floating-container" id="floatingContainer"></div>
 
-  <!-- UP TO TOP BUTTON -->
-<button id="upToTop" title="Back to Top">↑</button>
-
-<!-- AUDIO PLAYER -->
-<div class="audio-player">
-    <audio id="bg-audio" src="audio/Maher Zain - Rahmatun LilAlameen.mp3" autoplay loop muted></audio>
-    <button id="audio-toggle" title="Pause/Play Audio">🔊</button>
-</div>
-  
   <!-- FOOTER -->
   <footer>
     <p>© 2025 My Hiking Adventure | Designed with ❤️ by Niyazzz</p>
   </footer>
-
+  <script src="js/script.js"></script>
   <script src="js/highlightjs.js"></script>
-  <script src="js/homejs.js"></script>
 </body>
 </html>
-
-
